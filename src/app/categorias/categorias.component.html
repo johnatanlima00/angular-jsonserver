@@ -1,0 +1,18 @@
+<div class="container ofertas">
+    <div class="row oferta" *ngFor="let oferta of ofertas">
+        <div class="col-sm-4"><img [src]="oferta.imagens[0].url" style="width: 100%;"/></div>
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    {{oferta.anunciante}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{oferta.titulo}}</h5>
+                    <p class="card-text">{{oferta.descricao_oferta}}</p>
+                    <a [routerLink]="['/oferta', oferta.id]" class="btn btn-primary">Ver oferta</a>
+                </div>
+            </div>
+        </div>
+        <hr/>
+    </div>
+</div>
